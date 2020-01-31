@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/denim_blue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black2</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">9.3sp</item>
+    </style>
+
+    <style name="NavigationDrawerStyle" parent="Widget.Design.NavigationView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black2</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="medium_semi_bold_text">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="edt_label_grey">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/warm_grey</item>
+        <item name="android:textSize">@dimen/tiny_text</item>
+    </style>
+
+    <style name="regular_black_txt">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+    </style>
+
+    <style name="blue_btn">
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/btn_text</item>
+        <!--<item name="android:background">@drawable/selector_btn_black</item>-->
+    </style>
+
+
+
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/warm_grey</item>
+        <item name="colorControlNormal">@color/warm_grey</item>
+        <item name="colorControlActivated">@color/warm_grey</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+</resources>

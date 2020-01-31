@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="LoginViewModel"
+            type="com.solulab.example.view.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/labelSignIn"
+            style="@style/medium_semi_bold_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/sign_in"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/email"
+            android:theme="@style/TextInputLayoutAppearance"
+            app:layout_constraintEnd_toEndOf="@+id/labelSignIn"
+            app:layout_constraintStart_toStartOf="@+id/labelSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/labelSignIn">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                style="@style/regular_black_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+
+                android:text="@={LoginViewModel.emailAddress}"
+                tools:text="johndue@gmail.com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/password"
+            android:theme="@style/TextInputLayoutAppearance"
+            app:layout_constraintEnd_toEndOf="@+id/labelSignIn"
+            app:layout_constraintStart_toStartOf="@+id/labelSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/tiEmail">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                style="@style/regular_black_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@={LoginViewModel.password}"
+                tools:text="1234567890" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSingIn"
+            style="@style/blue_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="@{(v)-> LoginViewModel.onClick()}"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/denim_blue"
+            app:cornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="@+id/labelSignIn"
+            app:layout_constraintStart_toStartOf="@+id/labelSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/tiPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
