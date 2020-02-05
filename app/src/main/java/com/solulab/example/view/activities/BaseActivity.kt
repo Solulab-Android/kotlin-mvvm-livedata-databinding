@@ -1,5 +1,6 @@
-package com.solulab.example
+package com.solulab.example.view.activities
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.os.Build
@@ -13,11 +14,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import com.contestee.network.AutoDisposable
+import com.solulab.example.R
 
 /**
  * Created by Tofik Kazi
  */
 
+@SuppressLint("Registered")
 open class BaseActivity : AppCompatActivity() {
     var title: TextView? = null
     var toolbar: Toolbar? = null

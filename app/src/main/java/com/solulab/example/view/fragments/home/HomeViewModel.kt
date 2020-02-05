@@ -1,28 +1,24 @@
-package com.solulab.example.view.home
+package com.solulab.example.view.fragments.home
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.solulab.example.network.BaseModel
 import com.solulab.example.network.CallbackObserver
-
 import com.solulab.example.network.Networking
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class HomeViewModel : ViewModel() {
-    private lateinit var mcontext:Context
+class HomeViewModel(val context: Context) : ViewModel() {
 
     private val videoList: ArrayList<HomeData> = ArrayList()
     private var homeLiveData: MutableLiveData<List<HomeData>> = MutableLiveData()
 
     private lateinit var homeAdapter: HomeAdapter
+    private lateinit var homeViewHolder: HomeViewHolder
 
-
-    fun init(context: Context) {
-
-        mcontext=context
-        homeAdapter = HomeAdapter(videoList,mcontext)
+    fun init() {
+        homeAdapter = HomeAdapter(videoList, context, this)
         homeLiveData.observeForever {
             if (it != null) {
                 videoList.clear()
@@ -30,16 +26,10 @@ class HomeViewModel : ViewModel() {
                 homeAdapter.notifyDataSetChanged()
             }
         }
-
-
-
         getHomeList()
     }
 
-
-
     fun getHomeAdapter(): HomeAdapter = homeAdapter
-
 
     fun getHomeList() {
         Networking

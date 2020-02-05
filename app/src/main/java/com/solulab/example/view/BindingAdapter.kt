@@ -1,4 +1,4 @@
-package com.solulab.example.view.home
+package com.solulab.example.view
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
@@ -23,9 +23,4 @@ fun loadImageGenericImage(view: ImageView, url: String) {
         .load(url)
         .apply(RequestOptions().centerCrop())
         .into(view)
-}
-
-@BindingAdapter("favourite")
-fun favourite(view:ImageView,isFav:Boolean){
-
 }

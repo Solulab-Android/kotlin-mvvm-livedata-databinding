@@ -1,4 +1,4 @@
-package com.solulab.example.view.login
+package com.solulab.example.view.activities.login
 
 import android.util.Patterns
 

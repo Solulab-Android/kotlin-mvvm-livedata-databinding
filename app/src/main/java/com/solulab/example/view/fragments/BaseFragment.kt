@@ -1,4 +1,4 @@
-package com.solulab.example
+package com.solulab.example.view.fragments
 
 import android.app.Activity
 import android.content.Context

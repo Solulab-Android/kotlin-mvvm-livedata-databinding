@@ -1,4 +1,4 @@
-package com.solulab.example.view.home
+package com.solulab.example.view.fragments.home
 
 object Data {
 

@@ -8,7 +8,7 @@
 
         <variable
             name="LoginViewModel"
-            type="com.solulab.example.view.login.LoginViewModel" />
+            type="com.solulab.example.view.activities.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -12,15 +12,5 @@
         android:title="@string/fragment_detail"
         app:tooltipText="@string/fragment_detail" />
 
-    <item
-        android:id="@+id/fragmentBag"
-        android:icon="@drawable/v_ic_tab_cart"
-        android:title="@string/bag"
-        app:tooltipText="@string/bag" />
 
-    <item
-        android:id="@+id/fragmentProfile"
-        android:icon="@drawable/v_ic_tab_profile"
-        android:title="@string/profile"
-        app:tooltipText="@string/profile" />
 </menu>

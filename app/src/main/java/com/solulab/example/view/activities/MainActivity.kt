@@ -1,8 +1,6 @@
-package com.solulab.example.view
+package com.solulab.example.view.activities
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -11,12 +9,9 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.solulab.example.R
-
 import com.solulab.example.databinding.ActivityMainBinding
-
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -33,26 +28,17 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val actionBar = supportActionBar
         if (actionBar != null) {
-//            actionBar.setLogo(R.drawable.v_ic_star)
             actionBar.setHomeAsUpIndicator(R.drawable.v_ic_menu)
             actionBar.setDisplayShowTitleEnabled(true)
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
-
         navController = findNavController(R.id.navHostFragment)
         appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.fragmentHome, R.id.fragmentDetail,
-            R.id.fragmentBag, R.id.fragmentProfile
+            R.id.fragmentHome, R.id.fragmentDetail
         ).setDrawerLayout(drawer).build()
-
-        /*setupActionBarWithNavController(
-            navController,
-            appBarConfiguration
-        )*/
 
         visibilityNavElements(navController)
     }
-
 
 
     private fun visibilityNavElements(navController: NavController) {
@@ -64,12 +50,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.fragmentDetail -> {
                     showNavigation()
                 }
-                R.id.fragmentBag -> {
-                    showNavigation()
-                }
-                R.id.fragmentProfile ->{
-                    showNavigation()
-                }
+
                 else -> hideNavigation()
             }
         }
@@ -98,11 +79,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         when {
-            drawer.isDrawerOpen(GravityCompat.START) -> {
+                drawer.isDrawerOpen(GravityCompat.START) -> {
                 drawer.closeDrawer(GravityCompat.START)
             }
             else -> {
-                super.onBackPressed()
+               this.exitApp()
             }
         }
     }

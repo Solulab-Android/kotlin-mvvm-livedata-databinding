@@ -163,4 +163,10 @@
     <string name="fragment_home">Home</string>
     <string name="fragment_detail">Details</string>
     <string name="username">Solulab</string>
+    <string name="real_name">Real Name</string>
+    <string name="team">Team</string>
+    <string name="firstappearance">First Appearance</string>
+    <string name="created_by">Created By</string>
+    <string name="publisher">Publisher</string>
+    <string name="bio">Bio</string>
 </resources>

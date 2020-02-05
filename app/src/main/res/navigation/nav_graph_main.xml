@@ -7,19 +7,28 @@
 
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.solulab.example.view.home.FragmentHome"
+        android:name="com.solulab.example.view.fragments.home.FragmentHome"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_fragmentHome_to_fragmentDetail"
             app:destination="@id/fragmentDetail" />
+        <action
+            android:id="@+id/action_fragmentHome_to_ImageDetailActivity"
+            app:destination="@id/ImageDetailActivity" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentDetail"
-        android:name="com.solulab.example.view.details.FragmentDetails"
+        android:name="com.solulab.example.view.fragments.expandable.FragmentDetails"
         tools:layout="@layout/fragment_details">
 
     </fragment>
+
+
+    <activity
+        android:id="@+id/ImageDetailActivity"
+        android:name="com.solulab.example.view.activities.ImageDetails.ImageDetailActivity"
+        android:label="ImageDetailActivity" />
 
 
 </navigation>

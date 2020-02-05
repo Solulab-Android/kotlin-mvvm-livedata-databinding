@@ -11,11 +11,11 @@
 
         <variable
             name="data"
-            type="com.solulab.example.view.home.HomeData" />
+            type="com.solulab.example.view.fragments.home.HomeData" />
 
         <variable
             name="holder"
-            type="com.solulab.example.view.home.HomeViewHolder" />
+            type="com.solulab.example.view.fragments.home.HomeViewHolder" />
     </data>
 
     <LinearLayout
@@ -24,7 +24,7 @@
         android:layout_margin="5dp"
 
         android:background="?selectableItemBackground"
-        android:onClick="@{(view) -> holder.showAllFeeds(view,position, data)}"
+        android:onClick="@{(view) -> holder.onClicked(view,position, data)}"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView

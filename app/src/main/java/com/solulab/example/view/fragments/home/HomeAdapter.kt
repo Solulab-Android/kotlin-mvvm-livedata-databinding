@@ -1,4 +1,4 @@
-package com.solulab.example.view.home
+package com.solulab.example.view.fragments.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,9 +9,11 @@ import com.solulab.example.R
 import com.solulab.example.databinding.ItemHomeBinding
 
 
-class HomeAdapter(private val list: MutableList<HomeData>, val context: Context) :
-    RecyclerView.Adapter<HomeViewHolder>() {
-
+class HomeAdapter(
+    private val list: MutableList<HomeData>,
+    val context: Context,
+    val homeViewModel: HomeViewModel
+) : RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun getItemCount(): Int {
         return list.size
@@ -27,12 +29,11 @@ class HomeAdapter(private val list: MutableList<HomeData>, val context: Context)
             false
         )
         val viewHolder = HomeViewHolder(binder, parent, context, this)
-
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        holder.bind(list[position], list)
+        holder.bind(list[position], list, holder)
     }
 
 

@@ -1,10 +1,10 @@
 package com.solulab.example.network
 
-import com.solulab.example.view.home.HomeData
-import com.solulab.example.view.login.LoginData
+import com.solulab.example.view.fragments.home.HomeData
+import com.solulab.example.view.activities.login.LoginData
+import com.solulab.example.view.fragments.expandable.Hero
 import io.reactivex.Observable
 import retrofit2.http.GET
-import retrofit2.http.POST
 
 interface APIInterface {
 
@@ -13,6 +13,10 @@ interface APIInterface {
 
     @GET("5e32799e320000301c94ce62")
     fun getHomeList(): Observable<BaseModel<List<HomeData>>>
+
+
+    @GET("5e3a52552f00009a3156c210")
+    fun getDetailList():Observable<BaseModel<List<Hero>>>
 
 
 
