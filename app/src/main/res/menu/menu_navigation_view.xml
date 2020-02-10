@@ -11,6 +11,11 @@
         android:icon="@drawable/v_ic_tab_category"
         android:title="@string/fragment_detail"
         app:tooltipText="@string/fragment_detail" />
+    <item
+        android:id="@+id/fragmentUpload"
+        android:icon="@drawable/v_ic_tab_cart"
+        android:title="@string/fragment_upload"
+        app:tooltipText="@string/fragment_upload" />
 
 
 </menu>

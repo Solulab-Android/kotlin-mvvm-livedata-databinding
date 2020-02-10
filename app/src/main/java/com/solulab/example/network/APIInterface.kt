@@ -4,7 +4,11 @@ import com.solulab.example.view.fragments.home.HomeData
 import com.solulab.example.view.activities.login.LoginData
 import com.solulab.example.view.fragments.expandable.Hero
 import io.reactivex.Observable
-import retrofit2.http.GET
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
+import org.json.JSONObject
+import retrofit2.http.*
 
 interface APIInterface {
 
@@ -18,6 +22,9 @@ interface APIInterface {
     @GET("5e3a52552f00009a3156c210")
     fun getDetailList():Observable<BaseModel<List<Hero>>>
 
+    @Multipart
+    @POST("upload.php")
+     fun UploadData(@Part  image: ArrayList< MultipartBody.Part>, @Part("name")  name:String): Observable<Boolean>
 
 
 }

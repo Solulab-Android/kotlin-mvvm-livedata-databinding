@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
         navController = findNavController(R.id.navHostFragment)
         appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.fragmentHome, R.id.fragmentDetail
+            R.id.fragmentHome, R.id.fragmentDetail,R.id.fragmentUpload
         ).setDrawerLayout(drawer).build()
 
         visibilityNavElements(navController)
@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
                     showNavigation()
                 }
                 R.id.fragmentDetail -> {
+                    showNavigation()
+                }
+                R.id.fragmentUpload -> {
                     showNavigation()
                 }
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@+id/fragmentHome">
+    app:startDestination="@+id/fragmentUpload">
 
     <fragment
         android:id="@+id/fragmentHome"
@@ -15,12 +15,22 @@
         <action
             android:id="@+id/action_fragmentHome_to_ImageDetailActivity"
             app:destination="@id/ImageDetailActivity" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentUpload"
+            app:destination="@id/fragmentUpload" />
+
     </fragment>
 
     <fragment
         android:id="@+id/fragmentDetail"
         android:name="com.solulab.example.view.fragments.expandable.FragmentDetails"
         tools:layout="@layout/fragment_details">
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUpload"
+        android:name="com.solulab.example.view.fragments.upload.FragmentUpload"
+        tools:layout="@layout/fragment_upload">
 
     </fragment>
 

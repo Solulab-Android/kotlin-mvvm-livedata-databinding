@@ -169,4 +169,10 @@
     <string name="created_by">Created By</string>
     <string name="publisher">Publisher</string>
     <string name="bio">Bio</string>
+    <string name="select">Select</string>
+    <string name="name_for_image">Name For Image</string>
+    <string name="upload">Upload</string>
+    <string name="fragment_upload">Upload</string>
+    <string name="option_camera">Camere</string>
+    <string name="option_gallery">Gellery</string>
 </resources>
